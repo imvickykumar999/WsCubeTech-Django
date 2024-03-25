@@ -1,8 +1,11 @@
 
 from django.http import HttpResponse
 
-def aboutus(request):
-    return HttpResponse('About Us')
+def home(request):
+    return HttpResponse('Click <a href="/course-detail/">here</a> for Course Details')
 
-def contactus(request):
-    return HttpResponse('Contact Us')
+def course(request):
+    return HttpResponse('Let, Course ID = <a href="/course-detail/100">100</a>')
+
+def course_detail(request, course_id):
+    return HttpResponse(f'You have selected Course ID = {course_id}')

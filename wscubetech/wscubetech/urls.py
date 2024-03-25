@@ -20,6 +20,7 @@ from wscubetech import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('about-us/', views.aboutus),
-    path('contact-us/', views.contactus),
+    path('', views.home),
+    path('course-detail/', views.course),
+    path('course-detail/<course_id>', views.course_detail),
 ]
