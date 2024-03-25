@@ -1,8 +1,9 @@
 
 from django.http import HttpResponse
+from django.shortcuts import render
 
 def home(request):
-    return HttpResponse('Click <a href="/course-detail/">here</a> for Course Details')
+    return render(request, 'index.html')
 
 def course(request):
     return HttpResponse('Let, Course ID = <a href="/course-detail/100">100</a>')
